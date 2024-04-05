@@ -1,0 +1,14 @@
+server:
+    port: 8084
+    context-path: /app2
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: foo
+      clientSecret: bar
+      accessTokenUri: http://localhost:8083/sso-server/oauth/token
+      userAuthorizationUri: http://localhost:8083/sso-server/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8083/sso-server/user/me
